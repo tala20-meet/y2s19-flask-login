@@ -1,6 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>
+	Hi {{session['name']}}, you are logged in.
+	</h1>
+	<br>
+	your favorite food is: {{user.fav_food}}
 
-<h1>
-Hi {{session['name']}}, you are logged in.
-</h1>
-
-<a href = "/logout"> Logout </a>
+	<a href = "/logout"> Logout </a>
+</body>
+</html>

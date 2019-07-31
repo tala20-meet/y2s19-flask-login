@@ -30,13 +30,16 @@ def signup():
     return home()
 
 
-@app.route('/logged-in')
+@app.route('/logged-in', methods=['POST' , 'GET'])
 def logged_in():
-    return render_template('logged.html')
+    u =get_user(login_session['name'])
+    return render_template('logged.html',user=u)
 
 
 @app.route('/logout')
 def logout():
+    login_session['name'] = None
+    login_session['logged_in'] = False
     return home()
 
 
